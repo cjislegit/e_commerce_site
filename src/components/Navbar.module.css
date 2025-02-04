@@ -1,0 +1,11 @@
+.navbar {
+  font-family: 'Lato', serif;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__heading {
+  font-family: 'Josefin Sans', serif;
+  font-weight: bold;
+  color: #0d0e43;
+}
