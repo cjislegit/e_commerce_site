@@ -1,0 +1,11 @@
+.products {
+  margin-top: 7.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3.313rem;
+}

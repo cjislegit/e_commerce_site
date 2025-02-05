@@ -1,0 +1,39 @@
+.card {
+  max-width: 16.875rem;
+  min-height: 22.688rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.card__image > img {
+  max-width: 12.5rem;
+}
+
+.card__data {
+  background-color: #f6f7fb;
+  text-align: center;
+  padding: 1.125rem 0;
+}
+
+.card__data:hover {
+  background-color: #ebf4f3;
+}
+
+.card__data > h3 {
+  font-family: 'Josefin Sans', serif;
+  font-weight: bold;
+  color: #151875;
+  font-size: 1.125rem;
+}
+
+.card__data > p {
+  color: #fb2e86;
+  margin-top: 0.5rem;
+}
