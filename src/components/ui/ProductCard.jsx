@@ -1,8 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+
 import styles from './ProductCard.module.css';
 
 const ProductCard = ({ product }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={() => navigate(`/product/${product.id}`)}
+    >
       <div className={styles.card__image}>
         <img src={product.image} alt={product.title} />
       </div>
