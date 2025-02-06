@@ -12,8 +12,6 @@ const Products = () => {
       .then((data) => setProductData(data));
   }, []);
 
-  console.log(productData);
-
   return (
     <main className={styles.products}>
       <section className={styles.products__grid}>
