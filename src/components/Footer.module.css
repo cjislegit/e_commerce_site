@@ -1,0 +1,22 @@
+.footer {
+  background-color: #8a8fb9;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem 10rem;
+  margin-top: 5.188rem;
+}
+
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.navbar__heading {
+  font-family: 'Josefin Sans', serif;
+  font-weight: bold;
+  color: #0d0e43;
+  font-size: 2rem;
+}
