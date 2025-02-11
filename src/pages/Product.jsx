@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import styles from './Product.module.css';
 import ProductDetail from '../components/ui/ProductDetails';
 
 const Product = () => {
@@ -14,7 +15,7 @@ const Product = () => {
   }, []);
 
   return (
-    <main>
+    <main className={styles.product}>
       <ProductDetail product={product} />
     </main>
   );

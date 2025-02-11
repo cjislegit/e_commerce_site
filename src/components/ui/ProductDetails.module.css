@@ -1,0 +1,34 @@
+.productDetails {
+  max-width: 73.125rem;
+  padding: 0.813rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 5px 50px 0px rgba(246, 244, 253),
+    0px -4px 50px 0px rgba(246, 244, 253);
+  border-radius: 10px;
+  font-family: 'Josefin Sans', serif;
+}
+
+.productDetails__image {
+  max-width: 23.438rem;
+  max-height: 487rem;
+  height: auto;
+  margin-right: 2.563rem;
+}
+
+.productDetails__header {
+  font-weight: semibold;
+  font-size: 2.25rem;
+}
+
+.productDetails__description {
+  font-weight: semibold;
+  line-height: 1.813rem;
+  color: #a9acc6;
+}
+
+.productDetails__category {
+  font-weight: semibold;
+  color: #151875;
+  text-transform: capitalize;
+}
