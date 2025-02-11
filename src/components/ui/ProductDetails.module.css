@@ -19,12 +19,19 @@
 .productDetails__header {
   font-weight: semibold;
   font-size: 2.25rem;
+  margin-bottom: 0.813rem;
+}
+
+.productDetails__price {
+  margin-bottom: 0.813rem;
 }
 
 .productDetails__description {
   font-weight: semibold;
   line-height: 1.813rem;
   color: #a9acc6;
+  margin-bottom: 2.125rem;
+  margin-top: 0.813rem;
 }
 
 .productDetails__category {

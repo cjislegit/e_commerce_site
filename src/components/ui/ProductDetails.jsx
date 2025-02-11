@@ -11,7 +11,7 @@ const ProductDetails = ({ product }) => {
       />
       <div>
         <h2 className={styles.productDetails__header}>{product.title}</h2>
-        <span>
+        <span className={styles.productDetails__price}>
           $
           {new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(
             product.price
