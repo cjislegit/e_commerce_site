@@ -1,3 +1,8 @@
 .related {
+  display: flex;
+  justify-content: center;
+}
+
+.related__container {
   max-width: 73.125rem;
 }
