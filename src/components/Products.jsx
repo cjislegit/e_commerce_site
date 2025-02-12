@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { MoonLoader } from 'react-spinners';
 
 import styles from './Products.module.css';
 import ProductCard from './ui/ProductCard';
@@ -12,15 +13,18 @@ const Products = () => {
       .then((data) => setProductData(data));
   }, []);
 
-  return (
-    <main className={styles.products}>
+  let grid =
+    productData.length === 0 ? (
+      <MoonLoader color='#8a8fb9' />
+    ) : (
       <section className={styles.products__grid}>
         {productData.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </section>
-    </main>
-  );
+    );
+
+  return <main className={styles.products}>{grid}</main>;
 };
 
 export default Products;
