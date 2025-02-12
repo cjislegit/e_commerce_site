@@ -1,8 +1,10 @@
+import { MoonLoader } from 'react-spinners';
+
 import styles from './ProductDetails.module.css';
 
 const ProductDetails = ({ product }) => {
   if (!product || !product.rating) {
-    return <p>Loading product details...</p>;
+    return <MoonLoader color='#8a8fb9' />;
   }
 
   return (
