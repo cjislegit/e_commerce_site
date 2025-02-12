@@ -1,5 +1,7 @@
+import styles from './RelatedProducts.module.css';
+
 const RelatedProducts = () => {
-  return <h1>Related</h1>;
+  return <section className={styles.related}>Related</section>;
 };
 
 export default RelatedProducts;
