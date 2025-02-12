@@ -15,7 +15,12 @@ const ProductCard = ({ product }) => {
       </div>
       <div className={styles.card__data}>
         <h3 className={styles.card__title}>{product.title}</h3>
-        <p className={styles.card__price}>${product.price}</p>
+        <p className={styles.card__price}>
+          $
+          {new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(
+            product.price
+          )}
+        </p>
       </div>
     </div>
   );
