@@ -22,6 +22,12 @@
   margin-bottom: 0.813rem;
 }
 
+.productDetails__rating {
+  display: block;
+  margin-bottom: 0.875rem;
+  font-size: 0.875rem;
+}
+
 .productDetails__price {
   margin-bottom: 0.813rem;
 }

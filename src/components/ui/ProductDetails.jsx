@@ -1,7 +1,10 @@
 import styles from './ProductDetails.module.css';
 
 const ProductDetails = ({ product }) => {
-  console.log(product.rating.rate);
+  if (!product || !product.rating) {
+    return <p>Loading product details...</p>;
+  }
+
   return (
     <section className={styles.productDetails}>
       <img
@@ -12,7 +15,7 @@ const ProductDetails = ({ product }) => {
       <div>
         <h2 className={styles.productDetails__header}>{product.title}</h2>
         <span className={styles.productDetails__rating}>
-          {product.rating.rate}
+          Rating: {product.rating.rate} ({product.rating.count})
         </span>
         <span className={styles.productDetails__price}>
           $

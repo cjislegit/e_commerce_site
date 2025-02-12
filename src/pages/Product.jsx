@@ -5,7 +5,7 @@ import styles from './Product.module.css';
 import ProductDetail from '../components/ui/ProductDetails';
 
 const Product = () => {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
