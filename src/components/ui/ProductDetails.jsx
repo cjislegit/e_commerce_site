@@ -1,7 +1,7 @@
 import styles from './ProductDetails.module.css';
 
 const ProductDetails = ({ product }) => {
-  console.log(product);
+  console.log(product.rating.rate);
   return (
     <section className={styles.productDetails}>
       <img
@@ -11,6 +11,9 @@ const ProductDetails = ({ product }) => {
       />
       <div>
         <h2 className={styles.productDetails__header}>{product.title}</h2>
+        <span className={styles.productDetails__rating}>
+          {product.rating.rate}
+        </span>
         <span className={styles.productDetails__price}>
           $
           {new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(
