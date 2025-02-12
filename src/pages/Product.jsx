@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import styles from './Product.module.css';
 import ProductDetail from '../components/ui/ProductDetails';
+import RelatedProducts from '../components/ui/RelatedProducts';
 
 const Product = () => {
   const [product, setProduct] = useState({});
@@ -15,9 +16,12 @@ const Product = () => {
   }, []);
 
   return (
-    <main className={styles.product}>
-      <ProductDetail product={product} />
-    </main>
+    <>
+      <main className={styles.product}>
+        <ProductDetail product={product} />
+      </main>
+      <RelatedProducts />
+    </>
   );
 };
 
