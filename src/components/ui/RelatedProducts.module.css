@@ -4,5 +4,14 @@
 }
 
 .related__container {
-  max-width: 73.125rem;
+  width: 73.125rem;
+}
+
+.related__header {
+  margin-bottom: 2.5rem;
+}
+
+.related__products {
+  display: flex;
+  justify-content: space-between;
 }

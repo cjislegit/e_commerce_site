@@ -20,7 +20,7 @@ const Product = () => {
       <main className={styles.product}>
         <ProductDetail product={product} />
       </main>
-      <RelatedProducts />
+      <RelatedProducts category={product.category} />
     </>
   );
 };
