@@ -11,12 +11,16 @@
 
 .card__image {
   display: flex;
+  height: 100%;
   justify-content: center;
-  padding-bottom: 1rem;
+  align-content: center;
+  padding: 1rem;
+  background-color: white;
 }
 
 .card__image > img {
-  max-width: 12.5rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .card__data {
