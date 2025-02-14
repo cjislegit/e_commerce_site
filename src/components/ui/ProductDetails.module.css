@@ -1,5 +1,7 @@
 .productDetails {
   max-width: 73.125rem;
+  min-height: 31.813rem;
+  max-height: 31.813rem;
   padding: 0.813rem;
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
 
 .productDetails__image {
   max-width: 23.438rem;
-  max-height: 487rem;
+  max-height: 100%;
   height: auto;
   margin-right: 2.563rem;
 }
