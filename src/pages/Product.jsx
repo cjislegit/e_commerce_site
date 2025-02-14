@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import styles from './Product.module.css';
 import ProductDetail from '../components/ui/ProductDetails';
 import RelatedProducts from '../components/ui/RelatedProducts';
+import Hero from '../components/ui/Hero';
 
 const Product = () => {
   const [product, setProduct] = useState({});
@@ -17,6 +18,7 @@ const Product = () => {
 
   return (
     <>
+      <Hero />
       <main className={styles.product}>
         <ProductDetail product={product} />
       </main>
