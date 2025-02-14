@@ -5,11 +5,13 @@ import styles from './ProductCard.module.css';
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
+  const handleCardClick = () => {
+    navigate(`/product/${product.id}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div
-      className={styles.card}
-      onClick={() => navigate(`/product/${product.id}`)}
-    >
+    <div className={styles.card} onClick={handleCardClick}>
       <div className={styles.card__image}>
         <img src={product.image} alt={product.title} />
       </div>
