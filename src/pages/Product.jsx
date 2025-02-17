@@ -18,7 +18,7 @@ const Product = () => {
 
   return (
     <>
-      <Hero />
+      <Hero headline='Product Details' />
       <main className={styles.product}>
         <ProductDetail product={product} />
       </main>

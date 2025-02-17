@@ -1,9 +1,9 @@
 import styles from './Hero.module.css';
 
-const Hero = () => {
+const Hero = ({ headline }) => {
   return (
     <section className={styles.hero}>
-      <h2>All Items</h2>
+      <h2>{headline}</h2>
     </section>
   );
 };

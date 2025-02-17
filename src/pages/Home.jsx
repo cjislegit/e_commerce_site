@@ -4,7 +4,7 @@ import Hero from '../components/ui/Hero';
 const Home = () => {
   return (
     <>
-      <Hero />
+      <Hero headline='All Products' />
       <Products />
     </>
   );
