@@ -46,6 +46,11 @@
   display: block;
   margin-bottom: 2.125rem;
   color: #151875;
+  cursor: pointer;
+}
+
+.productDetails__add:hover {
+  color: #fb2e86;
 }
 
 .productDetails__category {

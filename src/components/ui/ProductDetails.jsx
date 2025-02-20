@@ -1,5 +1,6 @@
 import { MoonLoader } from 'react-spinners';
 import { useCartStore } from '../../store/cart';
+import { ToastContainer, toast } from 'react-toastify';
 
 import styles from './ProductDetails.module.css';
 
@@ -9,6 +10,19 @@ const ProductDetails = ({ product }) => {
   if (!product || !product.rating) {
     return <MoonLoader color='#8a8fb9' />;
   }
+
+  const handleCartClick = () => {
+    addToCart(product);
+    toast.success('Product added to cart!', {
+      position: 'top-right',
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
 
   return (
     <section className={styles.productDetails}>
@@ -31,15 +45,13 @@ const ProductDetails = ({ product }) => {
         <p className={styles.productDetails__description}>
           {product.description}
         </p>
-        <span
-          className={styles.productDetails__add}
-          onClick={() => addToCart({ ...product })}
-        >
+        <span className={styles.productDetails__add} onClick={handleCartClick}>
           Add To Cart
         </span>
         <span className={styles.productDetails__category}>
           Categories: {product.category}
         </span>
+        <ToastContainer />
       </div>
     </section>
   );
