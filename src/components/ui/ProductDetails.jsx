@@ -1,4 +1,5 @@
 import { MoonLoader } from 'react-spinners';
+import { useStore } from 'zustand';
 
 import styles from './ProductDetails.module.css';
 
@@ -28,6 +29,7 @@ const ProductDetails = ({ product }) => {
         <p className={styles.productDetails__description}>
           {product.description}
         </p>
+        <span className={styles.productDetails__add}>Add To Cart</span>
         <span className={styles.productDetails__category}>
           Categories: {product.category}
         </span>
