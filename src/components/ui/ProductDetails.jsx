@@ -1,9 +1,13 @@
 import { MoonLoader } from 'react-spinners';
-import { useStore } from 'zustand';
+import { useCartStore } from '../../store/cart';
 
 import styles from './ProductDetails.module.css';
+import { useEffect } from 'react';
 
 const ProductDetails = ({ product }) => {
+  const { cart, addToCart } = useCartStore();
+  console.log(cart);
+
   if (!product || !product.rating) {
     return <MoonLoader color='#8a8fb9' />;
   }
@@ -29,7 +33,12 @@ const ProductDetails = ({ product }) => {
         <p className={styles.productDetails__description}>
           {product.description}
         </p>
-        <span className={styles.productDetails__add}>Add To Cart</span>
+        <span
+          className={styles.productDetails__add}
+          onClick={() => addToCart({ ...product })}
+        >
+          Add To Cart
+        </span>
         <span className={styles.productDetails__category}>
           Categories: {product.category}
         </span>
