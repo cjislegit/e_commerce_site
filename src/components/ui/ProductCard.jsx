@@ -5,13 +5,23 @@ import styles from './ProductCard.module.css';
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
-  const handleCardClick = () => {
-    navigate(`/product/${product.id}`);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleCardClick = (e) => {
+    // Ensure keyboard interaction works
+    if (e.type === 'click' || e.key === 'Enter' || e.key === ' ') {
+      navigate(`/product/${product.id}`);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
-    <div className={styles.card} onClick={handleCardClick}>
+    <a
+      className={styles.card}
+      onClick={handleCardClick}
+      onKeyDown={handleCardClick}
+      role='link'
+      tabIndex='0' // Allows keyboard navigation
+      aria-label={`View details for ${product.title}`}
+    >
       <div className={styles.card__image}>
         <img src={product.image} alt={product.title} />
       </div>
@@ -27,7 +37,7 @@ const ProductCard = ({ product }) => {
           )}
         </p>
       </div>
-    </div>
+    </a>
   );
 };
 
