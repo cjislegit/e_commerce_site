@@ -45,9 +45,12 @@ const ProductDetails = ({ product }) => {
         <p className={styles.productDetails__description}>
           {product.description}
         </p>
-        <span className={styles.productDetails__add} onClick={handleCartClick}>
+        <button
+          className={styles.productDetails__add}
+          onClick={handleCartClick}
+        >
           Add To Cart
-        </span>
+        </button>
         <span className={styles.productDetails__category}>
           Categories: {product.category}
         </span>
