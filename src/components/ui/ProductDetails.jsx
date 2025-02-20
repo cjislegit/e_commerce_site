@@ -2,11 +2,9 @@ import { MoonLoader } from 'react-spinners';
 import { useCartStore } from '../../store/cart';
 
 import styles from './ProductDetails.module.css';
-import { useEffect } from 'react';
 
 const ProductDetails = ({ product }) => {
   const { cart, addToCart } = useCartStore();
-  console.log(cart);
 
   if (!product || !product.rating) {
     return <MoonLoader color='#8a8fb9' />;
