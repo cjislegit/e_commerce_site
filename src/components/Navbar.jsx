@@ -12,8 +12,12 @@ const Navbar = () => {
           <li className={styles.navbar__menuItem}>
             <Link to='/'>Home</Link>
           </li>
-          <li>About</li>
-          <li>Cart</li>
+          <li className={styles.navbar__menuItem}>
+            <Link to='/'>About</Link>
+          </li>
+          <li className={styles.navbar__menuItem}>
+            <Link to='/'>Cart</Link>
+          </li>
         </ul>
       </div>
     </nav>
