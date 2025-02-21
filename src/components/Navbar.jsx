@@ -16,7 +16,7 @@ const Navbar = () => {
             <Link to='/'>About</Link>
           </li>
           <li className={styles.navbar__menuItem}>
-            <Link to='/'>Cart</Link>
+            <Link to='/cart'>Cart</Link>
           </li>
         </ul>
       </div>
