@@ -1,6 +1,7 @@
 .cart {
   display: flex;
   justify-content: center;
+  margin-top: 8.188rem;
 }
 
 .cart h4 {

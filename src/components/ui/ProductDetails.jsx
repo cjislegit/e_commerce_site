@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import styles from './ProductDetails.module.css';
 
 const ProductDetails = ({ product }) => {
-  const { cart, addToCart } = useCartStore();
+  const { addToCart } = useCartStore();
 
   if (!product || !product.rating) {
     return <MoonLoader color='#8a8fb9' />;
