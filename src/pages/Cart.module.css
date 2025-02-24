@@ -1,0 +1,29 @@
+.cart {
+  display: flex;
+  justify-content: center;
+}
+
+.cart h4 {
+  font-family: 'Josefin Sans', serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #1d3178;
+}
+
+.cart__container {
+  max-width: 75rem;
+  width: 100%;
+  display: flex;
+}
+
+.cart__products {
+  flex-grow: 2;
+}
+
+.cart__total {
+  flex-grow: 1;
+}
+
+.cart__productTitles {
+  display: flex;
+}
