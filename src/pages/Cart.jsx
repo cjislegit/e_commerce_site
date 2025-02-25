@@ -5,7 +5,9 @@ import { useCartStore } from '../store/cart';
 const Cart = () => {
   const { cart, deleteFromCart } = useCartStore();
 
-  console.log(cart);
+  const handleDelete = (pid) => {
+    deleteFromCart(pid);
+  };
   return (
     <>
       <Hero headline='Shopping Cart' />
@@ -21,7 +23,23 @@ const Cart = () => {
             <div className={styles.cart__productItems}>
               {cart.map((item) => (
                 <div key={item.id} className={styles.cart__productItem}>
-                  {item.title}
+                  <div className={styles.cart__imgContainer}>
+                    <div
+                      className={styles.cart__imgClose}
+                      onClick={() => deleteFromCart(item.id)}
+                    >
+                      x
+                    </div>
+                    <img
+                      className={styles.cart__img}
+                      src={item.image}
+                      alt={item.title}
+                    />
+                  </div>
+                  <span className={styles.cart__title}>{item.title}</span>
+                  <span className={styles.cart__price}>{item.price}</span>
+                  <input className={styles.cart__quantity} type='number' />
+                  <span className={styles.cart__itemTotal}>{item.price}</span>
                 </div>
               ))}
             </div>

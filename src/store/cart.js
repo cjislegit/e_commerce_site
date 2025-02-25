@@ -9,7 +9,7 @@ export const useCartStore = create((set) => ({
   },
   deleteFromCart: (pid) => {
     set((state) => ({
-      cart: state.cart.filter((product) => product._id !== pid),
+      cart: state.cart.filter((product) => product.id !== pid),
     }));
   },
 }));
