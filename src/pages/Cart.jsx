@@ -15,10 +15,10 @@ const Cart = () => {
         <section className={styles.cart__container}>
           <div className={styles.cart__products}>
             <div className={styles.cart__productTitles}>
-              <h4>Product</h4>
-              <h4>Price</h4>
-              <h4>Quantity</h4>
-              <h4>Total</h4>
+              <h4 className={styles.cart__productTitle}>Product</h4>
+              <h4 className={styles.cart__priceTitle}>Price</h4>
+              <h4 className={styles.cart__quantityTitle}>Quantity</h4>
+              <h4 className={styles.cart__totalTitle}>Total</h4>
             </div>
             <div className={styles.cart__productItems}>
               {cart.map((item) => (
@@ -26,7 +26,7 @@ const Cart = () => {
                   <div className={styles.cart__imgContainer}>
                     <div
                       className={styles.cart__imgClose}
-                      onClick={() => deleteFromCart(item.id)}
+                      onClick={() => handleDelete(item.id)}
                     >
                       x
                     </div>

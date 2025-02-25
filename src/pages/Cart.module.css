@@ -2,10 +2,10 @@
   display: flex;
   justify-content: center;
   margin-top: 8.188rem;
+  font-family: 'Josefin Sans', serif;
 }
 
 .cart h4 {
-  font-family: 'Josefin Sans', serif;
   font-weight: bold;
   font-size: 1.25rem;
   color: #1d3178;
@@ -21,9 +21,15 @@
   flex-grow: 2;
 }
 
+.cart__priceTitle {
+  padding-left: 15.3rem;
+}
+
 .cart__productItem {
   display: flex;
   align-items: center;
+  color: #15245e;
+  font-size: 0.875rem;
 }
 
 .cart__imgContainer {
@@ -52,6 +58,7 @@
 .cart__title {
   margin-left: 1.063rem;
   width: 9rem;
+  color: black;
 }
 
 .cart__price {
