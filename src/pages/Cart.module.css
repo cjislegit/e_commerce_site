@@ -82,3 +82,7 @@
 .cart__productTitles {
   display: flex;
 }
+
+.cart__quantityTitle {
+  margin-left: 4rem;
+}
