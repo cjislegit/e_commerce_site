@@ -37,7 +37,11 @@ const Cart = () => {
                     />
                   </div>
                   <span className={styles.cart__title}>{item.title}</span>
-                  <span className={styles.cart__price}>{item.price}</span>
+                  <span className={styles.cart__price}>
+                    {new Intl.NumberFormat('en-US', {
+                      minimumFractionDigits: 2,
+                    }).format(item.price)}
+                  </span>
                   <input className={styles.cart__quantity} type='number' />
                   <span className={styles.cart__itemTotal}>{item.price}</span>
                 </div>
