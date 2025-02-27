@@ -86,3 +86,7 @@
 .cart__quantityTitle {
   margin-left: 4rem;
 }
+
+.cart__totalTitle {
+  margin-left: 2rem;
+}

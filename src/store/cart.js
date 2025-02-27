@@ -3,8 +3,9 @@ import { create } from 'zustand';
 export const useCartStore = create((set) => ({
   cart: [],
   addToCart: (product) => {
+    let newProduct = { ...product, quantity: 1 };
     set((state) => ({
-      cart: [...state.cart, product],
+      cart: [...state.cart, newProduct],
     }));
   },
   deleteFromCart: (pid) => {

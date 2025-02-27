@@ -42,7 +42,11 @@ const Cart = () => {
                       minimumFractionDigits: 2,
                     }).format(item.price)}
                   </span>
-                  <input className={styles.cart__quantity} type='number' />
+                  <input
+                    className={styles.cart__quantity}
+                    type='number'
+                    value={1}
+                  />
                   <span className={styles.cart__itemTotal}>{item.price}</span>
                 </div>
               ))}
