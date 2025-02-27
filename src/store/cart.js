@@ -13,4 +13,13 @@ export const useCartStore = create((set) => ({
       cart: state.cart.filter((product) => product.id !== pid),
     }));
   },
+  increaseQuantity: (pid) => {
+    set((state) => ({
+      cart: state.cart.map((product) =>
+        product.id === pid
+          ? { ...product, quantity: product.quantity + 1 }
+          : product
+      ),
+    }));
+  },
 }));

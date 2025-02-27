@@ -5,14 +5,18 @@ import { ToastContainer, toast } from 'react-toastify';
 import styles from './ProductDetails.module.css';
 
 const ProductDetails = ({ product }) => {
-  const { addToCart } = useCartStore();
+  const { addToCart, cart, increaseQuantity } = useCartStore();
 
   if (!product || !product.rating) {
     return <MoonLoader color='#8a8fb9' />;
   }
 
   const handleCartClick = () => {
-    addToCart(product);
+    if (cart.find((item) => item.id === product.id)) {
+      increaseQuantity(product.id);
+    } else {
+      addToCart(product);
+    }
     toast.success('Product added to cart!', {
       position: 'top-right',
       autoClose: 2000,
