@@ -42,11 +42,15 @@ const Cart = () => {
                       minimumFractionDigits: 2,
                     }).format(item.price)}
                   </span>
-                  <input
-                    className={styles.cart__quantity}
-                    type='number'
-                    value={item.quantity}
-                  />
+                  <div className={styles.cart__quantityContainer}>
+                    <button>-</button>
+                    <span className={styles.cart__quantity}>
+                      {item.quantity}
+                    </span>
+
+                    <button>+</button>
+                  </div>
+
                   <span className={styles.cart__itemTotal}>
                     {new Intl.NumberFormat('en-US', {
                       minimumFractionDigits: 2,

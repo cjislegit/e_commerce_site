@@ -66,9 +66,22 @@
   margin-right: 4.938rem;
 }
 
+.cart__quantityContainer {
+}
+
 .cart__quantity {
-  height: max-content;
+  min-height: 100%;
   width: 2.2rem;
+  color: #1d3178;
+  padding: 0 0.5rem;
+  padding-top: 0.15rem;
+  background-color: #bebfc2;
+}
+
+.cart__quantityContainer > button {
+  background-color: #e7e7ef;
+  border: none;
+  min-height: 100%;
 }
 
 .cart__itemTotal {
