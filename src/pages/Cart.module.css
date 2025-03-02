@@ -26,6 +26,10 @@
 }
 
 .cart__productItem {
+  padding-top: 3rem;
+}
+
+.cart__productItem {
   display: flex;
   align-items: center;
   color: #15245e;
