@@ -3,11 +3,21 @@ import Hero from '../components/ui/Hero';
 import { useCartStore } from '../store/cart';
 
 const Cart = () => {
-  const { cart, deleteFromCart } = useCartStore();
+  const { cart, deleteFromCart, increaseQuantity, decreaseQuantity } =
+    useCartStore();
 
   const handleDelete = (pid) => {
     deleteFromCart(pid);
   };
+
+  const handleIncrease = (pid) => {
+    increaseQuantity(pid);
+  };
+
+  const handleDecrease = (pid) => {
+    decreaseQuantity(pid);
+  };
+
   return (
     <>
       <Hero headline='Shopping Cart' />
@@ -43,12 +53,12 @@ const Cart = () => {
                     }).format(item.price)}
                   </span>
                   <div className={styles.cart__quantityContainer}>
-                    <button>-</button>
+                    <button onClick={() => handleDecrease(item.id)}>-</button>
                     <span className={styles.cart__quantity}>
                       {item.quantity}
                     </span>
 
-                    <button>+</button>
+                    <button onClick={() => increaseQuantity(item.id)}>+</button>
                   </div>
 
                   <span className={styles.cart__itemTotal}>

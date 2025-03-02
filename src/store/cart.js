@@ -22,4 +22,13 @@ export const useCartStore = create((set) => ({
       ),
     }));
   },
+  decreaseQuantity: (pid) => {
+    set((state) => ({
+      cart: state.cart.map((product) =>
+        product.id === pid
+          ? { ...product, quantity: product.quantity - 1 }
+          : product
+      ),
+    }));
+  },
 }));
