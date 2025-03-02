@@ -15,6 +15,12 @@ const Cart = () => {
   };
 
   const handleDecrease = (pid) => {
+    let quantity = cart.find((item) => item.id === pid).quantity;
+    if (quantity === 1) {
+      deleteFromCart(pid);
+      return;
+    }
+
     decreaseQuantity(pid);
   };
 
@@ -58,7 +64,7 @@ const Cart = () => {
                       {item.quantity}
                     </span>
 
-                    <button onClick={() => increaseQuantity(item.id)}>+</button>
+                    <button onClick={() => handleIncrease(item.id)}>+</button>
                   </div>
 
                   <span className={styles.cart__itemTotal}>
